@@ -1,0 +1,31 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 event-header">
+    <span class="fa fa-calendar-o" aria-hidden="true"></span>EVENTS LIST
+</div>
+<div class="event-row">
+    <div class="row" *ngFor="let event of events; let i=index" style="padding: 5px;border-bottom: 1px solid rgb(190, 190, 190);">
+        <div class="col col-xs-3 col-sm-3 col-md-2 col-lg-1 col-xl-1 event-date">
+            <p class="event-day">{{ event.EventDate | date:"d"}}</p>
+            <p class="event-month">{{ event.EventDate| date:"MMM" }}-{{ event.EventDate| date:"yy" }}</p>
+        </div>
+        <div class="col col-xs-9 col-sm-9 col-md-10 col-lg-11 col-xl-11 event-data">
+            <p class="event-title" data-toggle="modal" data-target="#evedescription" (click)="onclick(i)">
+                {{event.Title}}</p>
+            <div class="modal fade" id="evedescription" tabindex="-1" role="dialog"
+                aria-labelledby="evedescriptionLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" *ngIf="modelObj">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 id="evedescriptionLabel">{{modelObj.Title}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="event-description">
+                            {{modelObj.EventDescription}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+.event-header{ 
+    background-color: #2572B8;
+    color: white;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+label{
+    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+}
+.event-title{
+    color: #2572B8;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+p{ 
+    margin: 0px !important;
+}
+.event-day{
+    background-color:#21252917;
+    color: rgb(50,118, 182); 
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    height: 50px;
+    padding-top: 12px;
+}
+.event-month{
+    background-color: #2572B8;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    height: 25px;
+    padding-top: 2px;
+    font-size: 13px;
+}
+.event-row{
+    height: 420px;
+    padding-right: 25px;
+    padding-left: 15px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.event-row::-webkit-scrollbar{
+    display: none;
+}
+.event-row{
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+span{
+    padding-right: 5px;
+}
+.event-description {
+    font-size: 15px;
+    padding: 15px;
+}
+#evedescriptionLabel{
+    margin: 0px !important;
+}
+.event-date{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+@media only screen and (max-width: 992px){
+    .event-title{
+        font-size: 15px !important;
+    }
+}
+
+
